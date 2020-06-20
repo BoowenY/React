@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React,{Component} from 'react'
+class App extends Component{
+    render(){
+        return (
+            <div>
+                Hello MacBook Pro
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </div>
+            //JSX JavaScript & XML
+            // () as JS <> as HTML
+        )
+        // var child1 = React.createElement('li', null, 'anger.com')
+        // var child2 = React.createElement('li', null, 'I love')
+        // var root = React.createElement('ul',{className:'my-list'},child1,child2)
+    }
 }
-
-export default App;
+export default App
