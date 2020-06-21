@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Xjjitem from './Xjjitem'
 class Xjj extends Component {
   constructor(props) {
     super(props);
@@ -7,7 +8,17 @@ class Xjj extends Component {
       list: ["基础按摩", "精油分类", "fuck U"],
     };
   }
+  componentWillMount(){
+    console.log("future mount");
+    
+  }
+  componentDidMount(){
+    console.log("finished");
+    
+  }
   render() {
+    console.log("Doing");
+    
     return (
       <Fragment>
         <div>
@@ -20,10 +31,15 @@ class Xjj extends Component {
         <ul>
           {this.state.list.map((item, index) => {
             return (
-            <li key={index + item}
-            onClick={this.deleteItem.bind(this,index)}>
-                {item}
-                </li>
+            
+            <div>
+              <Xjjitem 
+              key={index + item}
+              content={item}
+              index={index}
+              deleteItem={this.deleteItem.bind(this)}/>
+            </div>
+            
             )
           })}
         </ul>
