@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import axios from 'axios'
 import Xjjitem from './Xjjitem'
 class Xjj extends Component {
   constructor(props) {
@@ -8,14 +9,11 @@ class Xjj extends Component {
       list: ["基础按摩", "精油分类", "fuck U"],
     };
   }
-  componentWillMount(){
-    console.log("future mount");
-    
-  }
   componentDidMount(){
-    console.log("finished");
-    
-  }
+    axios.post('https://web-api.juejin.im/v3/web/wbbr/bgeda')
+        .then((res)=>{console.log('axios 获取数据成功:'+JSON.stringify(res))  })
+        .catch((error)=>{console.log('axios 获取数据失败'+error)})
+}
   render() {
     console.log("Doing");
     

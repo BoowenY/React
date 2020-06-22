@@ -6,6 +6,8 @@ class Xjjitem extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
     render() { 
+        console.log("render");
+        
         return ( 
         <li onClick={this.handleClick}>{this.props.content}</li>
          );
